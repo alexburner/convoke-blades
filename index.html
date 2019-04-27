@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Convoke</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      /* (font) - load Google families */
+      WebFont.load({ google: { families: ["Amiri"] } });
+    </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css.map"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css"
+      integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/regular.css"
+      integrity="sha384-FKw7x8fCxuvzBwOJmhTJJsKzBl8dnN9e2R4+pXRfYoHivikuHkzWyhKWDSMcGNK8"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css"
+      integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq"
+      crossorigin="anonymous"
+    />
+    <style>
+      html {
+        background-color: #111;
+      }
+
+      body {
+        background-color: #292727;
+
+        /* (font) - start hidden */
+        transition: opacity 1.4s;
+        opacity: 0;
+      }
+
+      /* (font) - show when loaded */
+      .wf-active body {
+        opacity: 0.95;
+      }
+
+      .title {
+        font-family: "Amiri", serif;
+        color: #eee;
+      }
+
+      .subtitle {
+        color: #ccc;
+      }
+
+      .section {
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+        background-image: linear-gradient(
+          100deg,
+          rgba(0, 0, 0, 0.01) 0%,
+          rgba(0, 0, 0, 0.1) 100%
+        );
+      }
+
+      .container {
+        padding: 2% 4% 6%;
+      }
+
+      /* Brand */
+
+      .brand {
+        background-color: #000;
+        position: relative;
+      }
+
+      .brand .background {
+        opacity: 0.5;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background: url(https://i.imgur.com/FsV3Vi8.jpg) no-repeat center center;
+        background-size: cover;
+
+        filter: grayscale(100%);
+      }
+
+      .brand .logo {
+        width: 55%;
+        margin-bottom: 1.5em;
+      }
+
+      .brand .tagline {
+        background-color: #c52b1c;
+        letter-spacing: 0.25em;
+        padding: 0.5em 1.5em;
+      }
+
+      /* Core Competencies */
+
+      .skills {
+        background-color: transparent;
+      }
+
+      .skills .columns {
+        margin-top: 2em;
+      }
+
+      .skills .column {
+        padding: 2em 2em 1.5em;
+      }
+
+      /* Recent Articles */
+
+      .articles {
+        background-color: #e6e6e6;
+      }
+
+      .articles .title {
+        color: #333;
+      }
+
+      /* Recent Work */
+
+      .work {
+        background-color: #fff;
+        position: relative;
+        z-index: 10;
+      }
+
+      .work .title {
+        color: #333;
+      }
+
+      /* Contact */
+
+      .contact {
+        background-color: transparent;
+        position: relative;
+        z-index: 8;
+      }
+
+      .contact .input,
+      .contact .textarea {
+        background-color: rgba(255, 255, 255, 0.08);
+        border-color: #555;
+        color: #fff;
+      }
+
+      .contact ::-webkit-input-placeholder {
+        color: #888;
+      }
+
+      .contact ::-moz-placeholder {
+        color: #888;
+      }
+
+      .contact ::-ms-placeholder {
+        color: #888;
+      }
+
+      .contact ::placeholder {
+        color: #888;
+      }
+
+      .contact .button {
+        background-color: #c52b1c;
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Brand -->
+    <section class="brand hero is-large has-text-centered">
+      <div class="background"></div>
+      <div class="hero-body">
+        <div class="container">
+          <img
+            class="logo"
+            src="https://i.imgur.com/aXdnZnn.png"
+            alt="convoke"
+          />
+          <div class="subtitle is-6 is-uppercase">
+            <span class="tagline">
+              Gamers. Geeks. Creatives.
+            </span>
+          </div>
+          <div class="subtitle is-4">
+            Convoke is a Seattle-based integrated marketing agency
+            <br class="is-hidden-mobile" />
+            focused on helping brands win in gaming and esports.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Core Competencies -->
+    <section class="skills section">
+      <div class="container has-text-centered">
+        <div class="title is-2 is-spaced">Core Competencies</div>
+        <div class="subtitle">
+          Audience obsessed, data driven. We combine depth segment understanding
+          with our passion for gaming to develop and execute creative campaigns
+          that our clients—and their audiences—love.
+        </div>
+        <div class="columns is-multiline is-centered has-text-centered">
+          <div class="column is-4">
+            <p class="title is-spaced is-2">
+              <i class="fas fa-leaf fa-2x"></i>
+            </p>
+            <div class="title is-4">
+              Strategy
+            </div>
+            <div class="subtitle is-6">
+              Research, audience insights, go-to-market strategy, brand strategy
+            </div>
+          </div>
+          <div class="column is-4">
+            <p class="title is-spaced is-2">
+              <i class="fas fa-hamsa fa-2x"></i>
+            </p>
+            <div class="title is-4">
+              Creative
+            </div>
+            <div class="subtitle is-6">
+              Branding, content development, video production, graphic and
+              visual design
+            </div>
+          </div>
+          <div class="column is-4">
+            <p class="title is-spaced is-2">
+              <i class="fas fa-motorcycle fa-2x"></i>
+            </p>
+            <div class="title is-4">
+              Digital Marketing
+            </div>
+            <div class="subtitle is-6">
+              Paid media, social media, search, display, ecomm and analytics
+            </div>
+          </div>
+          <div class="column is-4">
+            <p class="title is-spaced is-2">
+              <i class="fas fa-sun fa-2x"></i>
+            </p>
+            <div class="title is-4">
+              Influencers & Community
+            </div>
+            <div class="subtitle is-6">
+              Strategy, support, management
+            </div>
+          </div>
+          <div class="column is-4">
+            <p class="title is-spaced is-2">
+              <i class="fas fa-crow fa-2x"></i>
+            </p>
+            <div class="title is-4">
+              Web Development
+            </div>
+            <div class="subtitle is-6">
+              Websites, app development, CMS, custom integrations, email
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recent Articles -->
+    <section class="articles section">
+      <div class="container">
+        <div class="title is-3">Featured Posts</div>
+        <div class="columns">
+          <div class="column">
+            <a
+              href="https://www.linkedin.com/pulse/mentorship-recommended-reading-gary-gonzalez/"
+            >
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image">
+                    <img
+                      src="https://media.licdn.com/dms/image/C5612AQG0udwh9bzAig/article-cover_image-shrink_720_1280/0?e=1561593600&v=beta&t=LtDK0HEHOIq08a1uVCGRZgcP68UZdA64Yx1aTiee7oU"
+                    />
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content is-small">
+                    <h3>Mentorship & Recommended Reading</h3>
+                    <p>
+                      Gary Gonzalez on LinkedIn
+                      <br />
+                      April 24, 2019
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="column">
+            <a
+              href="https://www.linkedin.com/pulse/bizarre-successful-launch-apex-legends-has-deep-future-gary-gonzalez/"
+            >
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image">
+                    <img
+                      src="https://media.licdn.com/dms/image/C5612AQG-qmDLnzz_6g/article-cover_image-shrink_720_1280/0?e=1561593600&v=beta&t=oTJenPpwVWYeoxiboQox_eKBUIe9fLIj0wLZ9fK9gaI"
+                    />
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content is-small">
+                    <h3>
+                      The Bizarre and Successful Launch of Apex Legends has Deep
+                      Implications for the Future of Marketing
+                    </h3>
+                    <p>
+                      Gary Gonzalez on LinkedIn
+                      <br />
+                      February 28, 2019
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="column">
+            <a
+              href="https://www.linkedin.com/pulse/when-you-start-treating-influencers-like-nails-gets-really-gonzalez/"
+            >
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image">
+                    <img
+                      src="https://media.licdn.com/dms/image/C5612AQG-Oy7fgsHYtA/article-cover_image-shrink_720_1280/0?e=1561593600&v=beta&t=tqZcso-7OqMJwrsngzmAPfOdLePCgVFpRK5Y3tZ5ruA"
+                    />
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content is-small">
+                    <h3>
+                      When you start treating influencers like nails, it gets
+                      really hard to build a house
+                    </h3>
+                    <p>
+                      Gary Gonzalez on LinkedIn
+                      <br />
+                      April 24, 2018
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="column">
+            <a
+              href="https://www.linkedin.com/pulse/you-dont-understand-esports-its-probably-because-youre-gary-gonzalez/"
+            >
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image">
+                    <img
+                      src="https://media.licdn.com/dms/image/C5612AQEycUFvAUB1mw/article-cover_image-shrink_720_1280/0?e=1561593600&v=beta&t=uxhto7fWpMM2qt6RiGjCpkiOhgFBnbvHqqrzPR8viaI"
+                    />
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="content is-small">
+                    <h3>
+                      If you don't understand esports, it's probably because
+                      you're old
+                    </h3>
+                    <p>
+                      Gary Gonzalez on LinkedIn
+                      <br />
+                      March 27, 2018
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recent Work -->
+    <section class="work section">
+      <div class="container">
+        <div class="title is-3">Recent Work</div>
+        <p>TODO</p>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="title is-3">Contact us</div>
+            <form action="https://formspree.io/gary@convoke.gg" method="POST">
+              <div class="field is-grouped">
+                <div class="control is-expanded has-icons-left">
+                  <input
+                    class="input"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+                <div class="control is-expanded has-icons-left">
+                  <input
+                    class="input"
+                    type="email"
+                    name="_replyto"
+                    placeholder="Email address"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <textarea
+                    class="textarea"
+                    name="message"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="field is-grouped">
+                <div class="control">
+                  <input class="button is-danger" type="submit" value="Send" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
