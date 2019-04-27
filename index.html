@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Convoke</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
       /* (font) - load Google families */
@@ -107,10 +107,26 @@
         margin-bottom: 1.5em;
       }
 
+      @media screen and (max-width: 768px) {
+        .brand .logo {
+          width: 80%;
+        }
+      }
+
       .brand .tagline {
         background-color: #c52b1c;
         letter-spacing: 0.25em;
         padding: 0.5em 1.5em;
+      }
+
+      @media screen and (max-width: 768px) {
+        .brand .tagline {
+          font-size: 0.8em;
+        }
+
+        .brand .pitch {
+          font-size: 1.25em;
+        }
       }
 
       /* Core Competencies */
@@ -203,7 +219,7 @@
               Gamers. Geeks. Creatives.
             </span>
           </div>
-          <div class="subtitle is-4">
+          <div class="pitch subtitle is-4">
             Convoke is a Seattle-based integrated marketing agency
             <br class="is-hidden-mobile" />
             focused on helping brands win in gaming and esports.
