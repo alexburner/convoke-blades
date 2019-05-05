@@ -121,7 +121,17 @@
       /* About */
 
       .about {
-        background-color: #070707;
+        background: #121212;
+        /* background: linear-gradient(
+          90deg,
+          rgba(4, 4, 4, 1) 0%,
+          rgba(7, 7, 7, 1) 50%,
+          rgba(4, 4, 4, 1) 100%
+        ); */
+      }
+
+      .about p {
+        color: #aaa;
       }
 
       /* Core Competencies */
@@ -171,6 +181,15 @@
 
       .articles .title {
         color: #333;
+      }
+
+      .articles a {
+        color: #363636;
+      }
+
+      .articles a:hover {
+        color: #3273dc;
+        text-decoration: underline;
       }
 
       /* Contact */
@@ -239,20 +258,16 @@
         <div class="title is-1 is-spaced">Gamers. Geeks. Creatives.</div>
         <div class="subtitle is-4">
           Convoke is a Seattle-based integrated marketing agency
-          <br class="is-hidden-mobile" />
+          <br class="is-hidden-touch" />
           focused on helping brands win in gaming and esports.
         </div>
-        <div class="subtitle is-4">
-          Audience obsessed, data driven. We combine depth segment
-          understanding<br
-            class="is-hidden-mobile-only is-hidden-tablet-only is-hidden-desktop-only"
-          />
-          with our passion for gaming to develop and execute creative campaigns
-          <br
-            class="is-hidden-mobile-only is-hidden-tablet-only is-hidden-desktop-only"
-          />
-          that our clients—and their audiences—love.
-        </div>
+        <p>
+          Audience obsessed, data driven. We combine depth segment understanding
+          with our passion for
+          <br class="is-hidden-touch" />
+          gaming to develop and execute creative campaigns that our clients—and
+          their audiences—love.
+        </p>
       </div>
     </section>
     <!-- Core Competencies -->
@@ -347,50 +362,58 @@
     <!-- Recent Articles -->
     <section class="articles section">
       <div class="container">
-        <div class="title is-3">Featured Posts</div>
+        <div class="title is-3">Featured Articles</div>
         <div class="columns">
           <div class="column">
             <a
+              target="_blank"
               href="https://www.linkedin.com/pulse/mentorship-recommended-reading-gary-gonzalez/"
+              title="Mentorship & Recommended Reading"
             >
-              <figure class="image">
-                <img
-                  src="https://media.licdn.com/dms/image/C5612AQG1x1UJk7pQhw/article-cover_image-shrink_720_1280/0?e=1562198400&v=beta&t=H8Yx-LPM7gsE5DbymJCevFV5iEuZf07d91onk2jV-aU"
-                />
-              </figure>
+              <img
+                src="https://media.licdn.com/dms/image/C5612AQG1x1UJk7pQhw/article-cover_image-shrink_720_1280/0?e=1562198400&v=beta&t=H8Yx-LPM7gsE5DbymJCevFV5iEuZf07d91onk2jV-aU"
+                alt="Recommended Reading"
+              />
+              Mentorship & Recommended Reading
             </a>
           </div>
           <div class="column">
             <a
+              target="_blank"
               href="https://www.linkedin.com/pulse/bizarre-successful-launch-apex-legends-has-deep-future-gary-gonzalez/"
+              title="Apex Legends and the Future of Marketing"
             >
-              <figure class="image">
-                <img
-                  src="https://media.licdn.com/dms/image/C5612AQG-qmDLnzz_6g/article-cover_image-shrink_720_1280/0?e=1561593600&v=beta&t=oTJenPpwVWYeoxiboQox_eKBUIe9fLIj0wLZ9fK9gaI"
-                />
-              </figure>
+              <img
+                src="https://media.licdn.com/dms/image/C4E12AQHsGM2VWJLNQQ/article-cover_image-shrink_720_1280/0?e=1562803200&v=beta&t=imPU5kJpNUBVKLibDz9BX0MpDXA8PmCyfUmajCP84HQ"
+                alt="Case Study"
+              />
+              Apex Legends and the Future of Marketing
             </a>
           </div>
           <div class="column">
             <a
+              target="_blank"
               href="https://www.linkedin.com/pulse/when-you-start-treating-influencers-like-nails-gets-really-gonzalez/"
+              title="The Importance of Treating Influences Like People"
             >
-              <figure class="image">
-                <img
-                  src="https://media.licdn.com/dms/image/C5612AQEet3YgFLMjtw/article-cover_image-shrink_720_1280/0?e=1562198400&v=beta&t=w0ub59ClpdEaEvdX1UyYhTzCBPk-WV9LS6V1tazyIXY"
-                />
-              </figure>
+              <img
+                src="https://media.licdn.com/dms/image/C5612AQEet3YgFLMjtw/article-cover_image-shrink_720_1280/0?e=1562198400&v=beta&t=w0ub59ClpdEaEvdX1UyYhTzCBPk-WV9LS6V1tazyIXY"
+                alt="Hot Take"
+              />
+              The Importance of Treating Influences Like People
             </a>
           </div>
           <div class="column">
             <a
+              target="_blank"
               href="https://www.linkedin.com/pulse/you-dont-understand-esports-its-probably-because-youre-gary-gonzalez/"
+              title="The Reason You Don't Understand Esports"
             >
-              <figure class="image">
-                <img
-                  src="https://media.licdn.com/dms/image/C5612AQGDgmIC6LA1Bg/article-cover_image-shrink_720_1280/0?e=1562198400&v=beta&t=WCS3-VpU2USMrENxu3e-ATwyS-sSp529NoGlMaeKPSQ"
-                />
-              </figure>
+              <img
+                src="https://media.licdn.com/dms/image/C5612AQGDgmIC6LA1Bg/article-cover_image-shrink_720_1280/0?e=1562198400&v=beta&t=WCS3-VpU2USMrENxu3e-ATwyS-sSp529NoGlMaeKPSQ"
+                alt="Marketing Theory"
+              />
+              The Reason You Don't Understand Esports
             </a>
           </div>
         </div>
