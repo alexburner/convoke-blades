@@ -4,12 +4,22 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Convoke</title>
+    <meta
+      name="description"
+      content="Convoke is a Seattle-based integrated marketing agency focused on helping brands win in gaming and esports."
+    />
+    <meta property="og:image" content="https://i.imgur.com/P2tN6ug.png" />
+    <meta property="twitter:image" content="https://i.imgur.com/P2tN6ug.png" />
     <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <meta name="theme-color" content="#111" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
       /* (font) - load Google families */
@@ -45,6 +55,11 @@
       integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <style>
       html {
         background-color: #070707;
@@ -178,6 +193,25 @@
         height: auto;
       }
 
+      .work .carousel {
+        margin-bottom: 1em;
+      }
+
+      .work .carousel-cell {
+        width: 100%;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .work .carousel .flickity-button {
+        transition: opacity 0.1s;
+        opacity: 0;
+      }
+
+      .work .carousel:hover .flickity-button {
+        opacity: 0.75;
+      }
+
       /* Recent Articles */
 
       .articles {
@@ -279,7 +313,7 @@
     <section class="skills section">
       <div class="container has-text-centered">
         <div class="title is-2">Core Competencies</div>
-        <div class="columns is-multiline is-centered has-text-centered">
+        <div class="columns is-multiline is-centered">
           <div class="column is-4">
             <p class="title is-3">
               <span class="fa-stack fa-2x">
@@ -359,17 +393,57 @@
     <section class="work section">
       <div class="container">
         <div class="title is-3">Recent Work</div>
-        <video autoplay loop muted playsinline>
-          <source src="https://i.imgur.com/k4mLihm.mp4" type="video/mp4" />
-        </video>
+        <div class="columns is-multiline">
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-three-quarters-widescreen is-three-quarters-fullhd"
+          >
+            <div class="carousel">
+              <div class="carousel-cell">
+                <video autoplay loop muted playsinline>
+                  <source
+                    src="https://i.imgur.com/k4mLihm.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="carousel-cell">
+                <img src="https://i.imgur.com/aUjpKBo.jpg" />
+              </div>
+              <div class="carousel-cell">
+                <img src="https://i.imgur.com/vN4kvnh.jpg" />
+              </div>
+              <div class="carousel-cell">
+                <img src="https://i.imgur.com/97cgL6E.jpg" />
+              </div>
+              <div class="carousel-cell">
+                <img src="https://i.imgur.com/UMCCz7W.jpg" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-one-quarter-widescreen is-one-quarter-fullhd"
+          >
+            <div class="title is-5">Warrior Zone Majors</div>
+            <p>
+              Working in support of the US Army and Airforce at Joint Base Lewis
+              McChord, Convoke was retained to develop branding for the Warrior
+              Zone Majors esports series. Paying homage to the event’s PNW
+              roots, we developed a brand identity that was brought to life
+              through logo design, a Twitch broadcast package, onsite assets and
+              digital marketing. The Warrior Zone Majors will continue
+              throughout the summer and includes Super Smash Bros Ultimate,
+              Black Ops 4, Madden and NBA2K.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Recent Articles -->
     <section class="articles section">
       <div class="container">
         <div class="title is-3">Featured Articles</div>
-        <div class="columns">
-          <div class="column">
+        <div class="columns is-mobile is-multiline">
+          <div class="column is-half-mobile">
             <a
               target="_blank"
               href="https://www.linkedin.com/pulse/mentorship-recommended-reading-gary-gonzalez/"
@@ -382,7 +456,7 @@
               Mentorship & Recommended Reading
             </a>
           </div>
-          <div class="column">
+          <div class="column is-half-mobile">
             <a
               target="_blank"
               href="https://www.linkedin.com/pulse/bizarre-successful-launch-apex-legends-has-deep-future-gary-gonzalez/"
@@ -395,7 +469,7 @@
               Apex Legends and the Future of Marketing
             </a>
           </div>
-          <div class="column">
+          <div class="column is-half-mobile">
             <a
               target="_blank"
               href="https://www.linkedin.com/pulse/when-you-start-treating-influencers-like-nails-gets-really-gonzalez/"
@@ -408,7 +482,7 @@
               The Importance of Treating Influences Like People
             </a>
           </div>
-          <div class="column">
+          <div class="column is-half-mobile">
             <a
               target="_blank"
               href="https://www.linkedin.com/pulse/you-dont-understand-esports-its-probably-because-youre-gary-gonzalez/"
@@ -474,5 +548,8 @@
         </div>
       </div>
     </footer>
+    <script>
+      new Flickity(".carousel", { wrapAround: true });
+    </script>
   </body>
 </html>
