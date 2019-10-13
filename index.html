@@ -229,27 +229,27 @@
         color: #333;
       }
 
-      .work video {
-        width: 100%;
-        height: auto;
+      .work .columns:not(:last-child) {
+        margin-bottom: 3em;
       }
 
-      .work .carousel {
-        margin-bottom: 1em;
-      }
-
-      .work .carousel-cell {
+      .work .carousel-media-cell {
         width: 100%;
         height: auto;
         margin-right: 10px;
       }
 
-      .work .carousel .flickity-button {
+      .work .carousel-media-cell video {
+        width: 100%;
+        height: auto;
+      }
+
+      .work .carousel-media .flickity-button {
         transition: opacity 0.3s;
         opacity: 0;
       }
 
-      .work .carousel:hover .flickity-button {
+      .work .carousel-media:hover .flickity-button {
         opacity: 0.75;
       }
 
@@ -257,6 +257,12 @@
         .flickity-button {
           /* no carousel buttons on touch */
           display: none;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .mobile-reverse-column-order {
+          flex-direction: column-reverse;
         }
       }
 
@@ -445,12 +451,57 @@
     <section class="work section">
       <div class="container">
         <div class="title is-3">Recent Work</div>
+        <!-- Microsoft Game Stack | Strategy -->
         <div class="columns is-multiline">
           <div
             class="column is-full-mobile is-full-tablet is-full-desktop is-three-quarters-widescreen is-three-quarters-fullhd"
           >
-            <div class="carousel">
-              <div class="carousel-cell">
+            <div id="carousel-game-stack" class="carousel-media">
+              <div class="carousel-media-cell">
+                <img src="https://i.imgur.com/d8fWxpR.jpg" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-one-quarter-widescreen is-one-quarter-fullhd"
+          >
+            <div class="title is-5">Microsoft Game Stack | Strategy</div>
+            <p>
+              When Microsoft decided to make a deeper player into the developer
+              tools market by launching Game Stack, they needed a strong
+              understanding of the audience to build a marketing strategy from.
+              Due to our ability to both speak gamer and build enterprise level
+              marketing systems, we worked in conjunction with partner agency
+              Bread n’ Butter to run audience research, develop market
+              positioning and build content strategy for the new bundle of
+              products.
+            </p>
+          </div>
+        </div>
+        <!-- US Army | Brand Planning NON-SMALL ONLY -->
+        <div
+          class="columns is-multiline is-hidden-touch is-hidden-desktop-only"
+        >
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-one-quarter-widescreen is-one-quarter-fullhd"
+          >
+            <div class="title is-5">US Army | Brand Planning</div>
+            <p>
+              Working in support of the US Army and Airforce at Joint Base
+              Lewis-McChord, Convoke was retained to develop branding for the
+              Warrior Zone Majors. Inspired by the event’s pacific northwest
+              roots, Convoke developed a gritty brand identity that was brought
+              to life with a Twitch broadcast package, onsite assets and digital
+              marketing support. Operated by Atomic Infotech, the Warrior Zone
+              Majors will continue throughout 2019 with Smash Bros, Call of
+              Duty, Madden and NBA2K.
+            </p>
+          </div>
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-three-quarters-widescreen is-three-quarters-fullhd"
+          >
+            <div id="carousel-us-army" class="carousel-media">
+              <div class="carousel-media-cell">
                 <video autoplay loop muted playsinline>
                   <source
                     src="https://i.imgur.com/k4mLihm.mp4"
@@ -458,10 +509,10 @@
                   />
                 </video>
               </div>
-              <div class="carousel-cell">
+              <div class="carousel-media-cell">
                 <img src="https://i.imgur.com/aUjpKBo.jpg" />
               </div>
-              <div class="carousel-cell">
+              <div class="carousel-media-cell">
                 <video autoplay loop muted playsinline>
                   <source
                     src="https://i.imgur.com/jmHNT1f.mp4"
@@ -469,10 +520,54 @@
                   />
                 </video>
               </div>
-              <div class="carousel-cell">
+              <div class="carousel-media-cell">
                 <img src="https://i.imgur.com/97cgL6E.jpg" />
               </div>
-              <div class="carousel-cell">
+              <div class="carousel-media-cell">
+                <video autoplay loop muted playsinline>
+                  <source
+                    src="https://i.imgur.com/RALKiby.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- US Army | Brand Planning SMALL ONLY -->
+        <div class="columns is-multiline is-hidden-widescreen">
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-one-quarter-widescreen is-one-quarter-fullhd"
+          >
+            <div class="title is-5">US Army | Brand Planning</div>
+          </div>
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-three-quarters-widescreen is-three-quarters-fullhd"
+          >
+            <div id="carousel-us-army-small" class="carousel-media">
+              <div class="carousel-media-cell">
+                <video autoplay loop muted playsinline>
+                  <source
+                    src="https://i.imgur.com/k4mLihm.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="carousel-media-cell">
+                <img src="https://i.imgur.com/aUjpKBo.jpg" />
+              </div>
+              <div class="carousel-media-cell">
+                <video autoplay loop muted playsinline>
+                  <source
+                    src="https://i.imgur.com/jmHNT1f.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="carousel-media-cell">
+                <img src="https://i.imgur.com/97cgL6E.jpg" />
+              </div>
+              <div class="carousel-media-cell">
                 <video autoplay loop muted playsinline>
                   <source
                     src="https://i.imgur.com/RALKiby.mp4"
@@ -485,7 +580,6 @@
           <div
             class="column is-full-mobile is-full-tablet is-full-desktop is-one-quarter-widescreen is-one-quarter-fullhd"
           >
-            <div class="title is-5">Warrior Zone Majors</div>
             <p>
               Working in support of the US Army and Airforce at Joint Base
               Lewis-McChord, Convoke was retained to develop branding for the
@@ -493,8 +587,36 @@
               roots, Convoke developed a gritty brand identity that was brought
               to life with a Twitch broadcast package, onsite assets and digital
               marketing support. Operated by Atomic Infotech, the Warrior Zone
-              Majors will continue throughout the summer with Black Ops 4,
-              Madden and NBA2K.
+              Majors will continue throughout 2019 with Smash Bros, Call of
+              Duty, Madden and NBA2K.
+            </p>
+          </div>
+        </div>
+        <!-- Thrival Festival | Social Media Marketing -->
+        <div class="columns is-multiline">
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-three-quarters-widescreen is-three-quarters-fullhd"
+          >
+            <div id="carousel-game-stack" class="carousel-media">
+              <div class="carousel-media-cell">
+                <img src="https://i.imgur.com/5jguqmf.jpg" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="column is-full-mobile is-full-tablet is-full-desktop is-one-quarter-widescreen is-one-quarter-fullhd"
+          >
+            <div class="title is-5">
+              Thrival Festival | Social Media Marketing
+            </div>
+            <p>
+              Formerly a music festival, Thrival approached Convoke after
+              completing a rebrand that positioned them as one of the east
+              coast’s premier tech and innovation conferences. Our task was to
+              help Thrival reach a completely new audience and guide them from
+              awareness to registration. Utilizing AI-driven audience
+              segmentation, we built an integrated social campaign that drove
+              nearly 10,000 engagement and over 500 ticket sales for the event.
             </p>
           </div>
         </div>
@@ -613,7 +735,11 @@
       </div>
     </footer>
     <script>
-      new Flickity(".carousel", { wrapAround: true });
+      ["carousel-us-army", "carousel-us-army-small"].forEach(id => {
+        const element = document.getElementById(id);
+        element.style.marginBottom = "1em";
+        new Flickity(element, { wrapAround: true });
+      });
     </script>
   </body>
 </html>
